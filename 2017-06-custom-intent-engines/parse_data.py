@@ -7,6 +7,7 @@ def parseJson(file_pre, file_suf):
   file_pre = file_pre
   with open(file_pre + '/train_' + file_pre + file_suf + '.json', 'r') as f:
     json_data = json.load(f)
+
   datalist = json_data[file_pre]
   corr_data = []
   count = 0
@@ -26,6 +27,7 @@ def parseJson(file_pre, file_suf):
 
 
 if __name__ == '__main__':
-  file_pre = 'AddToPlaylist'
+  file_pre = 'SearchScreeningEvent'  # 'AddToPlaylist', 'BookRestaurant', 'GetWeather', 'PlayMusic', 'RateBook', 'SearchCreativeWork', 'SearchScreeningEvent'
+  # file_suf = '_full'
   file_suf = ''
   parseJson(file_pre, file_suf)
